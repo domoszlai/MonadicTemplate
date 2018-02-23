@@ -35,9 +35,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.1.4.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,18 +50,19 @@
     <Compile Include="AST\ArgumentList.cs" />
     <Compile Include="AST\Block.cs" />
     <Compile Include="AST\Identifier.cs" />
-    <Compile Include="Context.cs" />
-    <Compile Include="CovariantTuple.cs" />
-    <Compile Include="Generator.cs" />
-    <Compile Include="GFormatProvider.cs" />
-    <Compile Include="IGenerator.cs" />
+    <Compile Include="engine\Context.cs" />
+    <Compile Include="engine\CovariantTuple.cs" />
+    <Compile Include="engine\Generator.cs" />
+    <Compile Include="engine\GFormatProvider.cs" />
+    <Compile Include="engine\IGenerator.cs" />
     <Compile Include="AST\Method.cs" />
-    <Compile Include="Prelude.cs" />
+    <Compile Include="engine\Prelude.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
